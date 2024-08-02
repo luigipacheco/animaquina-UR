@@ -95,7 +95,9 @@ GPL License
 ## Authors
 
 - Luis Pacheco
-- Contributions by Alex Cortez
+  
+Contributions by:
+ - Alex Cortez
 
 ## Support
 
