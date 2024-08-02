@@ -1,4 +1,4 @@
-# Animaquina v0.0.3 Pre-Alpha for Universal Robots
+# Animaquina v0.0.4 Pre-Alpha for Universal Robots
 by Luis Pacheco
 
 Animaquina is a robot Integrated Development Environment (IDE) designed for controlling and simulating Robots within Blender. It leverages Blender's powerful 3D capabilities to provide a versatile platform for robot programming and visualization.
