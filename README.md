@@ -1,4 +1,4 @@
-# Animaquina v0.0.3 Pre-Alpha for Universal Robots
+# Animaquina v0.0.4 Pre-Alpha for Universal Robots
 by Luis Pacheco
 
 Animaquina is a robot Integrated Development Environment (IDE) designed for controlling and simulating Robots within Blender. It leverages Blender's powerful 3D capabilities to provide a versatile platform for robot programming and visualization.
@@ -27,24 +27,26 @@ Animaquina is a robot Integrated Development Environment (IDE) designed for cont
 
 ## Usage
 
-1. Set the IP address of your Universal Robot in the Animaquina panel.
-2. Click the **Connect** button to establish a connection with the robot.
-3. In the target selection dropdown, select `ur10e_target_twin`.
-4. Click the **Update Pose** button to synchronize the digital twin's TCP with the selected robot's TCP. This action updates the current joint rotation and TCP position of the digital twin robot.
-5. On the info panel, you can view the current joint rotation and TCP position of the digital twin.
-6. To move the robot via Blender:
+1. Select the robot you have from the drop down list this is either ur16e, ur10e or ur5e
+2. Set the IP address of your Universal Robot in the Animaquina panel.
+3. Click the **Connect** button to establish a connection with the robot.
+4. In the target selection dropdown, select `ur10e_target_twin`.
+5. Click the **Update Pose** button to synchronize the digital twin's TCP with the selected robot's TCP. This action updates the current joint rotation and TCP position of the digital twin robot.
+6. On the info panel, you can view the current joint rotation and TCP position of the digital twin.
+7. To move the robot via Blender:
    a. Manipulate the `ur10e_target_twin` object in the 3D viewport.
    b. Click the **GoTarget** button to send the command and move the physical robot to the new position.
-7. Enable the **RealTime** option to see the digital twin robot moving in sync with the physical robot.
-8. To manually manipulate the physical robot:
-   a. Click on **Manual Mode** to enable physical manipulation of the robot.git 
+8. Enable the **RealTime** option to see the digital twin robot moving in sync with the physical robot.
+9. To manually manipulate the physical robot:
+   a. Click on **Manual Mode** to enable physical manipulation of the robot.
    b. If **RealTime** is enabled, you will see the robot's movements updated in real-time in the 3D viewport.
-9. To digitize features in the cell:
+10. To digitize features in the cell:
    a. Move the robot's TCP to the desired position.
    b. Click the **addMarker** button to save the current TCP position as a marker.
-10. To run a toolpath:
+11. To run a toolpath:
     a. Select a mesh object in the 3D viewport.
     b. Click the **Path** button to execute the toolpath.
+
 
     **Warning:** The order of vertices in the mesh object matters for the toolpath execution. Ensure the vertices are in the correct order before using this function.
 
@@ -84,6 +86,7 @@ The developer is not responsible for any damage to property, personal injury, or
 
 - Blender version: 4.2
 - Universal Robots models only
+- tested on windows
 
 ## License
 
@@ -92,10 +95,20 @@ GPL License
 ## Authors
 
 - Luis Pacheco
-- Contributions by Alex Cortez
+  
+Contributions by:
+ - Alex Cortez
 
 ## Support
 
 For support or to report bugs, please [contact our support team/create an issue on our GitHub repository].
 
 **Note:** This is a pre-alpha version intended for development and testing purposes only. It contains significant limitations and safety risks. Do not use in production environments or without expert supervision.
+
+## Acknowledgments
+
+This project builds on the ideas and inspirations from several similar tools, including KUKA//prc,tactum,  Mimic for Maya, Oriole, VisoSE/Robots, and RobotexMachina. Their innovative approaches and solutions have influenced the development of this project. 
+
+Special thanks to the RDF Lab @ FIU for providing the necessary equipment to test. Your support and resources have been invaluable in bringing this project to fruition. 
+
+We also extend our gratitude to the developers of the urx and ur_rtde libraries for making it easy to communicate Robots using Python. Your contributions have greatly simplified the integration of robotic control in this project
